@@ -40,7 +40,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1 className={styles.title}>The Jelly Market</h1>
+        <h1 className={styles.title}>The Jelly Market - (beta 1.1)</h1>
         
         <ConnectWallet />
       </header>
