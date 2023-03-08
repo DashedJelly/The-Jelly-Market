@@ -37,12 +37,13 @@ const Home: NextPage = () => {
     const { contract, } = useContract("0xbb71538BB1db7c2C8C5bD78D1b443e440b697d66");
   }
 
-  return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1 className={styles.title}>The Jelly Market</h1>
-        
-        <ConnectWallet />
+  return
+<div> (
+    <header className={styles.header}>
+  <img src="/assets/banner.png" alt="The Jelly Market Banner" width="1500" height="500" />
+  <ConnectWallet />
+</header>
+</div>
       </header>
       <main className={styles.main}>
         {!isLoading ? (
