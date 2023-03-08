@@ -1,8 +1,9 @@
-import { ConnectWallet, MediaRenderer, useActiveListings, useContract } from "@thirdweb-dev/react";
+import { ConnectWallet, MediaRenderer, useActiveListings, useContract, } from "@thirdweb-dev/react";
 import { BigNumber } from "ethers";
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { useEffect } from "react";
+
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -31,17 +32,40 @@ const Home: NextPage = () => {
 
   const { data: nfts, isLoading } = useActiveListings(contract);
 
+
   function Component() {
-    const { contract } = useContract("0xbb71538BB1db7c2C8C5bD78D1b443e440b697d66");
+    const { contract, } = useContract("0xbb71538BB1db7c2C8C5bD78D1b443e440b697d66");
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <header className={styles.header}>
-        <img src="The-Jelly-Market/assets/banner.png" alt="The Jelly Market" width="1500" height="500" />
+      <style>
+  {`
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(100%); }
+    }
+  `}
+</style>
+
+<h1 className={styles.title} 
+    style={{ fontFamily: 'Gotham, sans-serif' }}
+    onMouseEnter={(e) => {
+        e.target.style.color = '#ADD8E6';
+        e.target.style.animation = 'scroll 10s linear infinite';
+    }}
+    onMouseLeave={(e) => {
+        e.target.style.color = '';
+        e.target.style.animation = '';
+    }}>
+    The Jelly Market
+</h1>
+
+
+        
         <ConnectWallet />
       </header>
-
       <main className={styles.main}>
         {!isLoading ? (
           <div className={styles.grid}>
