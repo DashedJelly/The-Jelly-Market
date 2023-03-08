@@ -40,29 +40,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-      <style>
-  {`
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(100%); }
-    }
-  `}
-</style>
-
-<h1 className={styles.title} 
-    style={{ fontFamily: 'Gotham, sans-serif' }}
-    onMouseEnter={(e) => {
-        e.target.style.color = '#ADD8E6';
-        e.target.style.animation = 'scroll 10s linear infinite';
-    }}
-    onMouseLeave={(e) => {
-        e.target.style.color = '';
-        e.target.style.animation = '';
-    }}>
-    The Jelly Market
-</h1>
-
-
+        <h1 className={styles.title}>The Jelly Market</h1>
         
         <ConnectWallet />
       </header>
