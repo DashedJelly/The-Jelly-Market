@@ -1,9 +1,8 @@
-import { ConnectWallet, MediaRenderer, useActiveListings, useContract, } from "@thirdweb-dev/react";
+import { ConnectWallet, MediaRenderer, useActiveListings, useContract } from "@thirdweb-dev/react";
 import { BigNumber } from "ethers";
 import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { useEffect } from "react";
-
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -32,19 +31,17 @@ const Home: NextPage = () => {
 
   const { data: nfts, isLoading } = useActiveListings(contract);
 
-
   function Component() {
-    const { contract, } = useContract("0xbb71538BB1db7c2C8C5bD78D1b443e440b697d66");
+    const { contract } = useContract("0xbb71538BB1db7c2C8C5bD78D1b443e440b697d66");
   }
 
-  return
-<div> (
-    <header className={styles.header}>
-  <img src="/assets/banner.png" alt="The Jelly Market Banner" width="1500" height="500" />
-  <ConnectWallet />
-</header>
-</div>
+  return (
+    <div>
+      <header className={styles.header}>
+        <img src="/assets/banner.png" alt="The Jelly Market Banner" width="1500" height="500" />
+        <ConnectWallet />
       </header>
+
       <main className={styles.main}>
         {!isLoading ? (
           <div className={styles.grid}>
