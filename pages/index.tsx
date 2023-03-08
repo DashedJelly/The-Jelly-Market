@@ -38,7 +38,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <header className={styles.header}>
-        <img src="/assets/banner.png" alt="The Jelly Market Banner" width="1500" height="500" />
+        <img src="The-Jelly-Market/assets/banner.png" alt="The Jelly Market" width="1500" height="500" />
         <ConnectWallet />
       </header>
 
