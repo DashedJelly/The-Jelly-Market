@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       <header className={styles.header}>
         <h1 className={styles.title}>The Jelly Market</h1>
         
-        <ConnectWallet accentColor="#E6E6FA" colorMode="dark" />
+        <ConnectWallet accentColor="#734f96" colorMode="dark" />
       </header>
       <main className={styles.main}>
         {!isLoading ? (
@@ -54,8 +54,8 @@ const Home: NextPage = () => {
                     <div className={styles.imageWrapper}>
                       <MediaRenderer
                         src={nft.asset.image}
-                        height="200px"
-                        width="200px"
+                        height="140px"
+                        width="140px"
                       />
                     </div>
                     <p>{nft.asset.name}</p>
