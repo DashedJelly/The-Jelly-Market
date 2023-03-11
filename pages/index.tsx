@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       <header className={styles.header}>
         <h1 className={styles.title}>The Jelly Market</h1>
         
-        <ConnectWallet />
+        <ConnectWallet accentColor="#E6E6FA" colorMode="dark" />
       </header>
       <main className={styles.main}>
         {!isLoading ? (
